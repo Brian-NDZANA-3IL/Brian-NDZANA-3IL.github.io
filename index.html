@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Ndzana | Data & IA</title>
+  <meta name="description" content="Brian Ndzana, étudiant ingénieur en data science à 3IL Limoges. Je cherche un stage de fin d'études à partir de janvier 2027." />
+  <meta name="author" content="Brian Ndzana" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <noscript><style>.loader{display:none}.intro,.reveal{opacity:1;transform:none}.project__cover{clip-path:none}</style></noscript>
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader__name"><span>Brian</span> <span>Ndzana</span></div>
+    <div class="loader__count" id="loaderCount">0</div>
+  </div>
+  <div class="cursor" id="cursor"></div>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand">
+        <span class="brand__badge">BN</span>
+        <span class="brand__name">Brian Ndzana</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#about">À propos</a>
+        <a href="#experience">Expérience</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#education">Formation</a>
+        <a href="#contact" class="nav__cta-mobile">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <a href="https://github.com/Brian-NDZANA-3IL" class="nav__gh" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
+        <a href="#contact" class="btn btn--primary btn--sm nav__cta">Contact</a>
+        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <canvas class="hero__dots" id="dots"></canvas>
+
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="pill intro" style="--d:0">
+            <span class="pill__dot"></span>
+            <span>En recherche de stage de fin d'études, dès <strong>janvier 2027</strong></span>
+          </p>
+
+          <h1 class="hero__title">
+            <span class="line" data-split data-delay="150">Bonjour, je suis</span>
+            <span class="line name" data-split data-delay="450">Brian Ndzana</span>
+          </h1>
+
+          <p class="hero__role intro" style="--d:3">
+            Étudiant ingénieur en
+            <span class="typer"><span id="typer">data science</span><i class="caret"></i></span>
+          </p>
+
+          <p class="hero__lead intro" style="--d:4">
+            Je suis en dernière année à 3IL Ingénieurs, à Limoges. J'aime surtout le moment où un modèle
+            quitte le notebook et commence à servir à quelqu'un : c'est ce que j'ai fait chez Guinness,
+            et c'est ce que je cherche à refaire en stage.
+          </p>
+
+          <div class="hero__cta intro" style="--d:5">
+            <a class="btn btn--primary magnetic" href="assets/CV-Brian-NDZANA.pdf" download>
+              <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+              Mon CV (PDF)
+            </a>
+            <a class="btn btn--ghost magnetic" href="https://github.com/Brian-NDZANA-3IL" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> GitHub</a>
+          </div>
+
+          <ul class="hero__facts intro" style="--d:6">
+            <li><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Limoges, mobile partout en France</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Français, anglais (B2)</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual intro" style="--d:3">
+          <div class="portrait">
+            <div class="portrait__orbit"><i></i></div>
+            <div class="portrait__inner">
+              <span class="portrait__initials">BN</span>
+            </div>
+          </div>
+          <div class="float-card fc--1" data-depth="30">
+            <strong>-80 %</strong><small>de délai de détection</small>
+          </div>
+          <div class="float-card fc--2" data-depth="-24">
+            <strong>LLM + RAG</strong><small>chatbot pédagogique</small>
+          </div>
+          <div class="float-card fc--3" data-depth="18">
+            <strong>10 000+</strong><small>lignes synchronisées / jour</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" id="marquee">
+      <div class="marquee__track" id="marqueeTrack">
+        <span>Python</span><span>Scikit-learn</span><span>PyTorch</span><span>LangChain</span><span>SQL</span>
+        <span>Pandas</span><span>FastAPI</span><span>Docker</span><span>Power BI</span><span>TensorFlow</span><span>Git</span><span>Kubernetes</span>
+        <span aria-hidden="true">Python</span><span aria-hidden="true">Scikit-learn</span><span aria-hidden="true">PyTorch</span><span aria-hidden="true">LangChain</span><span aria-hidden="true">SQL</span>
+        <span aria-hidden="true">Pandas</span><span aria-hidden="true">FastAPI</span><span aria-hidden="true">Docker</span><span aria-hidden="true">Power BI</span><span aria-hidden="true">TensorFlow</span><span aria-hidden="true">Git</span><span aria-hidden="true">Kubernetes</span>
+      </div>
+    </div>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about">
+          <div class="about__text">
+            <h2 data-split>À propos</h2>
+            <p class="reveal">
+              Je m'appelle André Desterne Brian Ndzana, mais tout le monde m'appelle Brian. J'ai fait ma prépa
+              MPSI à Yaoundé avant de rejoindre 3IL à Limoges, où je termine un cursus d'ingénieur informatique
+              option science des données.
+            </p>
+            <p class="reveal">
+              Mon stage chez Guinness m'a appris une chose : un modèle qui marche bien sur mon ordinateur ne vaut
+              pas grand-chose s'il n'est pas branché sur les vrais flux de l'entreprise. Depuis, dans mes projets,
+              je fais attention au coût de calcul, au déploiement et à la documentation autant qu'au score du modèle.
+            </p>
+            <p class="reveal">
+              Je cherche un <strong>stage de fin d'études de 6 mois à partir de janvier 2027</strong>, idéalement
+              en machine learning ou sur des sujets autour des LLM.
+            </p>
+          </div>
+
+          <dl class="about__cards">
+            <div class="info reveal"><dt>Stage</dt><dd>Fin d'études, 6 mois</dd></div>
+            <div class="info reveal"><dt>Début</dt><dd>Janvier 2027</dd></div>
+            <div class="info reveal"><dt>Lieu</dt><dd>Limoges, ouvert à toute la France</dd></div>
+            <div class="info reveal"><dt>Langues</dt><dd>Français, anglais B2</dd></div>
+            <div class="info reveal"><dt>À côté</dt><dd>Foot, basket, mangas, musique</dd></div>
+          </dl>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <strong><span data-count="80" data-prefix="-">-80</span> %</strong>
+            <span>sur le délai de détection des anomalies (de 24 h à moins de 2 h)</span>
+          </div>
+          <div class="stat reveal">
+            <strong><span data-count="10000">10 000</span>+</strong>
+            <span>entrées synchronisées par jour entre CRM et ERP</span>
+          </div>
+          <div class="stat reveal">
+            <strong><span data-count="3">3</span></strong>
+            <span>pipelines de synchronisation mis en production</span>
+          </div>
+          <div class="stat reveal">
+            <strong><span data-count="5">5</span></strong>
+            <span>évolutions du CRM livrées, du besoin à la prod</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="experience">
+      <div class="container">
+        <h2 data-split>Expérience</h2>
+
+        <article class="job reveal">
+          <div class="job__head">
+            <div class="job__logo">G</div>
+            <div>
+              <h3>Assistant Data Scientist</h3>
+              <p class="job__company">Groupe Guinness, Direction des Systèmes d'Information</p>
+            </div>
+            <div class="job__when">
+              <span class="tag">Mai à sept. 2024</span>
+              <small>5 mois, Yaoundé (Cameroun)</small>
+            </div>
+          </div>
+
+          <div class="job__items">
+            <div class="job__item">
+              <h4>Détection d'anomalies</h4>
+              <p>J'ai développé des modèles (Python, Scikit-learn) pour repérer les anomalies dans les flux de données. Le délai de détection est passé de 24 h à moins de 2 h.</p>
+            </div>
+            <div class="job__item">
+              <h4>Synchronisation CRM / ERP</h4>
+              <p>J'ai conçu et déployé 3 pipelines entre le CRM interne et les ERP de plusieurs clients : plus de 10 000 entrées par jour, avec des règles de rapprochement et des contrôles de cohérence.</p>
+            </div>
+            <div class="job__item">
+              <h4>Évolutions du CRM</h4>
+              <p>J'ai pris en charge 5 évolutions demandées par les équipes métier, du recueil du besoin jusqu'à la mise en production, en documentant à chaque fois.</p>
+            </div>
+          </div>
+
+          <ul class="tags">
+            <li>Python</li><li>Scikit-learn</li><li>SQL</li><li>Bash</li><li>PHP</li><li>JavaScript</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 data-split>Projets</h2>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project__cover cover--blue">
+              <div class="bubble b1">C'est quoi la descente de gradient ?</div>
+              <div class="bubble b2">D'après le chapitre 3 de ton cours, c'est une méthode qui...</div>
+            </div>
+            <div class="project__body">
+              <span class="tag">Projet perso</span>
+              <h3>Chatbot pédagogique</h3>
+              <p>Un chatbot qui répond aux questions des étudiants en s'appuyant sur leurs supports de cours plutôt que sur les seules connaissances du LLM.</p>
+              <ul class="bullets">
+                <li>RAG hybride avec LangChain : MongoDB Atlas Search et FAISS interrogés ensemble</li>
+                <li>Travail sur le découpage et l'indexation pour limiter le contexte envoyé au modèle</li>
+                <li>Back en FastAPI, interface Streamlit, le tout dans Docker</li>
+              </ul>
+              <ul class="tags"><li>LangChain</li><li>FAISS</li><li>MongoDB</li><li>FastAPI</li><li>Streamlit</li><li>Docker</li></ul>
+              <a class="project__link" href="https://github.com/Brian-NDZANA-3IL/chatbot" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Voir le code</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__cover cover--coral">
+              <div class="rings"><i></i><i></i><i></i></div>
+            </div>
+            <div class="project__body">
+              <span class="tag">Projet école</span>
+              <h3>SIMCO</h3>
+              <p>Un agent d'évaluation cognitive qui adapte ses questions selon les réponses et le comportement de la personne (webcam, signaux non verbaux).</p>
+              <ul class="bullets">
+                <li>Random Forest et MLP comparés pour classer les profils, en tenant compte du coût de calcul</li>
+                <li>Signaux non verbaux extraits avec MediaPipe</li>
+                <li>Choix des questions par théorie IRT et multi-armed bandit</li>
+                <li>Sujet ouvert, sans base existante : plusieurs pistes testées avant de fixer l'architecture</li>
+              </ul>
+              <ul class="tags"><li>PyTorch</li><li>Scikit-learn</li><li>MediaPipe</li><li>Mistral (Ollama)</li><li>FastAPI</li><li>React</li><li>Docker</li></ul>
+              <a class="project__link" href="https://github.com/Brian-NDZANA-3IL/SIMCO" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Voir le code</a>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__cover cover--green">
+              <svg class="chart" viewBox="0 0 200 110">
+                <path class="chart__area" d="M10 100 C 30 50, 60 28, 100 20 S 170 12, 190 10 L190 100 Z"/>
+                <path class="chart__line" d="M10 100 C 30 50, 60 28, 100 20 S 170 12, 190 10"/>
+                <line x1="10" y1="100" x2="190" y2="10" class="chart__diag"/>
+              </svg>
+            </div>
+            <div class="project__body">
+              <span class="tag">Projet de cours</span>
+              <h3>Prédiction du churn</h3>
+              <p>Prédire quels clients risquent de partir. J'ai volontairement gardé un modèle simple pour voir jusqu'où il pouvait aller.</p>
+              <ul class="bullets">
+                <li>Feature engineering puis régression logistique</li>
+                <li>Évaluation avec matrice de confusion, courbe ROC et AUC</li>
+              </ul>
+              <ul class="tags"><li>Python</li><li>Pandas</li><li>Scikit-learn</li></ul>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__cover cover--ink">
+              <svg class="maze" viewBox="0 0 200 120">
+                <path class="maze__walls" d="M20 20h160v80H20z M60 20v50 M100 50v50 M140 20v50"/>
+                <path class="maze__path" d="M40 90 V35 H80 V85 H120 V35 H160 V90"/>
+                <circle class="maze__bot" r="6" cx="40" cy="90"/>
+              </svg>
+            </div>
+            <div class="project__body">
+              <span class="tag">Projet école</span>
+              <h3>Navigation autonome TurtleBot3</h3>
+              <p>Comparer deux façons de faire naviguer un robot dans un labyrinthe : la planification classique et l'apprentissage par renforcement.</p>
+              <ul class="bullets">
+                <li>Planification A*, Dijkstra et Greedy sur grille d'occupation, suivi de trajectoire PID</li>
+                <li>Agent DQN avec experience replay entraîné sur l'odométrie et le lidar</li>
+                <li>Benchmark des deux approches en simulation Gazebo</li>
+              </ul>
+              <ul class="tags"><li>Python</li><li>ROS Noetic</li><li>Gazebo</li><li>DQN</li><li>A*</li></ul>
+              <a class="project__link" href="https://github.com/Brian-NDZANA-3IL/GROUPE-I2-ROBOTIC-PROJECT" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Voir le code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="skills">
+      <div class="container">
+        <h2 data-split>Compétences</h2>
+
+        <div class="skills">
+          <div class="skill reveal">
+            <h3>Machine learning et IA</h3>
+            <ul class="tags"><li>Scikit-learn</li><li>PyTorch</li><li>TensorFlow</li><li>LangChain</li><li>LLaMA 3</li><li>RAG</li><li>Agents LLM</li><li>Prompt engineering</li><li>Détection d'anomalies</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>Données</h3>
+            <ul class="tags"><li>Python</li><li>Pandas</li><li>SQL</li><li>ETL</li><li>Qualité des données</li><li>Migration de données</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>Déploiement</h3>
+            <ul class="tags"><li>Docker</li><li>Kubernetes</li><li>FastAPI</li><li>API REST</li><li>Git</li><li>GitHub</li><li>GitLab</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>Langages</h3>
+            <ul class="tags"><li>Python</li><li>SQL</li><li>Java</li><li>JavaScript</li><li>PHP</li><li>Bash</li><li>VBA</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>Reporting</h3>
+            <ul class="tags"><li>Power BI</li><li>DAX</li><li>Excel (TCD, VBA)</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>Langues</h3>
+            <div class="lang"><span>Français</span><span class="bar"><i style="--w:100%"></i></span><small>natif</small></div>
+            <div class="lang"><span>Anglais</span><span class="bar"><i style="--w:72%"></i></span><small>B2</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <h2 data-split>Formation</h2>
+
+        <div class="edu">
+          <article class="edu__card reveal">
+            <span class="tag tag--accent">2024 - 2027</span>
+            <h3>Diplôme d'ingénieur informatique</h3>
+            <p>Option science des données, dernière année en cours</p>
+            <small>3IL Ingénieurs, Limoges</small>
+          </article>
+          <article class="edu__card reveal">
+            <span class="tag">2021 - 2024</span>
+            <h3>Prépa MPSI et 1<sup>re</sup> année d'ingénieur</h3>
+            <p>Maths, physique, informatique</p>
+            <small>Saint Jean Ingénieur, Yaoundé</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <h2 data-split>Me contacter</h2>
+          <p class="contact__lead">Vous proposez un stage en data ou en IA pour 2027 ? Écrivez-moi, je vous réponds rapidement.</p>
+          <div class="contact__grid">
+            <a class="contact__item" href="mailto:ndzanaa@3il.fr">
+              <small>E-mail</small><strong>ndzanaa@3il.fr</strong>
+            </a>
+            <a class="contact__item" href="https://linkedin.com/in/brian-ndzana" target="_blank" rel="noopener">
+              <small>LinkedIn</small><strong>brian-ndzana</strong>
+            </a>
+            <a class="contact__item" href="https://github.com/Brian-NDZANA-3IL" target="_blank" rel="noopener">
+              <small>GitHub</small><strong>Brian-NDZANA-3IL</strong>
+            </a>
+          </div>
+          <a class="btn btn--white magnetic" href="assets/CV-Brian-NDZANA.pdf" download>
+            <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+            Télécharger mon CV
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>Brian Ndzana, <span id="year">2026</span></span>
+      <a href="#top">Haut de page</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

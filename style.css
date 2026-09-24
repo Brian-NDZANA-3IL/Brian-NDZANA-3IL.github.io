@@ -351,6 +351,7 @@ small { color: var(--muted); font-size: 0.82rem; }
 }
 
 @media (max-width: 640px) {
+  .brand__name { display: none; }
   .work { grid-template-columns: 1fr; gap: 8px; padding: 28px 0; }
   .work__side { grid-column: 1; }
   .work__num { padding-top: 0; }

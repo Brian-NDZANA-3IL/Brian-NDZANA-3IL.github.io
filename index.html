@@ -210,6 +210,28 @@
         <h2 data-split>Projets</h2>
 
         <div class="projects">
+          <article class="project project--wide reveal">
+            <div class="project__cover cover--ink">
+              <div class="inbox">
+                <div class="inbox__row r1"><span class="inbox__subject">Commande toujours pas arrivée</span><span class="inbox__tag t-ok">brouillon prêt</span></div>
+                <div class="inbox__row r2"><span class="inbox__subject">Mise en demeure</span><span class="inbox__tag t-stop">à un humain</span></div>
+                <div class="inbox__row r3"><span class="inbox__subject">Spots et variateur</span><span class="inbox__tag t-ok">brouillon prêt</span></div>
+              </div>
+            </div>
+            <div class="project__body">
+              <span class="tag">Projet perso</span>
+              <h3>Agent de support client par e-mail</h3>
+              <p>Un agent qui trie les e-mails du service client, cherche la réponse dans la base de connaissances interne et prépare un brouillon avec ses sources. Une personne relit et valide chaque réponse : l'agent n'envoie rien lui-même.</p>
+              <ul class="bullets">
+                <li>Tri par catégorie et urgence avec Claude (sorties structurées Pydantic), recherche TF-IDF dans la base</li>
+                <li>Remboursements, gestes commerciaux et litiges exclus par double contrôle (modèle + règles), résistant aux tentatives de manipulation</li>
+                <li>Lecture IMAP en lecture seule, brouillons déposés dans la boîte, aucun code d'envoi</li>
+                <li>Interface de relecture Streamlit qui mesure les critères de succès : 60 % de brouillons sans modification majeure, 30 % de temps gagné</li>
+              </ul>
+              <ul class="tags"><li>Python</li><li>Claude API</li><li>RAG</li><li>Pydantic</li><li>Streamlit</li><li>IMAP</li><li>pytest</li></ul>
+              <a class="project__link" href="https://github.com/Brian-NDZANA-3IL/agent-support-email" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Voir le code</a>
+            </div>
+          </article>
           <article class="project reveal">
             <div class="project__cover cover--blue">
               <div class="bubble b1">C'est quoi la descente de gradient ?</div>

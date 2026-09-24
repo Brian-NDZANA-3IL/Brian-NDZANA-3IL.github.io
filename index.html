@@ -85,24 +85,6 @@
             <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Français, anglais (B2)</li>
           </ul>
         </div>
-
-        <div class="hero__visual intro" style="--d:3">
-          <div class="portrait">
-            <div class="portrait__orbit"><i></i></div>
-            <div class="portrait__inner">
-              <span class="portrait__initials">BN</span>
-            </div>
-          </div>
-          <div class="float-card fc--1" data-depth="30">
-            <strong>-80 %</strong><small>de délai de détection</small>
-          </div>
-          <div class="float-card fc--2" data-depth="-24">
-            <strong>LLM + RAG</strong><small>chatbot pédagogique</small>
-          </div>
-          <div class="float-card fc--3" data-depth="18">
-            <strong>10 000+</strong><small>lignes synchronisées / jour</small>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -144,25 +126,6 @@
             <div class="info reveal"><dt>À côté</dt><dd>Foot, basket, mangas, musique</dd></div>
           </dl>
         </div>
-
-        <div class="stats">
-          <div class="stat reveal">
-            <strong><span data-count="80" data-prefix="-">-80</span> %</strong>
-            <span>sur le délai de détection des anomalies (de 24 h à moins de 2 h)</span>
-          </div>
-          <div class="stat reveal">
-            <strong><span data-count="10000">10 000</span>+</strong>
-            <span>entrées synchronisées par jour entre CRM et ERP</span>
-          </div>
-          <div class="stat reveal">
-            <strong><span data-count="3">3</span></strong>
-            <span>pipelines de synchronisation mis en production</span>
-          </div>
-          <div class="stat reveal">
-            <strong><span data-count="5">5</span></strong>
-            <span>évolutions du CRM livrées, du besoin à la prod</span>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -172,7 +135,6 @@
 
         <article class="job reveal">
           <div class="job__head">
-            <div class="job__logo">G</div>
             <div>
               <h3>Assistant Data Scientist</h3>
               <p class="job__company">Groupe Guinness, Direction des Systèmes d'Information</p>
@@ -209,134 +171,127 @@
       <div class="container">
         <h2 data-split>Projets</h2>
 
-        <div class="projects">
-          <article class="project project--wide reveal">
-            <div class="project__cover cover--ink">
-              <div class="inbox">
-                <div class="inbox__row r1"><span class="inbox__subject">Commande toujours pas arrivée</span><span class="inbox__tag t-ok">brouillon prêt</span></div>
-                <div class="inbox__row r2"><span class="inbox__subject">Mise en demeure</span><span class="inbox__tag t-stop">à un humain</span></div>
-                <div class="inbox__row r3"><span class="inbox__subject">Spots et variateur</span><span class="inbox__tag t-ok">brouillon prêt</span></div>
-              </div>
-            </div>
-            <div class="project__body">
-              <span class="tag">Projet perso</span>
-              <h3>Agent de support client par e-mail</h3>
-              <p>Un agent qui trie les e-mails du service client, cherche la réponse dans la base de connaissances interne et prépare un brouillon avec ses sources. Une personne relit et valide chaque réponse : l'agent n'envoie rien lui-même.</p>
-              <ul class="bullets">
-                <li>Tri par catégorie et urgence avec Claude (sorties structurées Pydantic), recherche TF-IDF dans la base</li>
-                <li>Remboursements, gestes commerciaux et litiges exclus par double contrôle (modèle + règles), résistant aux tentatives de manipulation</li>
-                <li>Lecture IMAP en lecture seule, brouillons déposés dans la boîte, aucun code d'envoi</li>
-                <li>Interface de relecture Streamlit qui mesure les critères de succès : 60 % de brouillons sans modification majeure, 30 % de temps gagné</li>
+        <div class="filters" role="group" aria-label="Filtrer les projets">
+          <button class="filter is-active" data-filter="all">Tous</button>
+          <button class="filter" data-filter="genai">IA générative</button>
+          <button class="filter" data-filter="ml">Machine learning</button>
+          <button class="filter" data-filter="robot">Robotique</button>
+        </div>
+
+        <div class="works">
+          <article class="work reveal" data-cat="genai">
+            <span class="work__num">01</span>
+            <div class="work__main">
+              <p class="work__domain">Agents IA · Traitement des e-mails</p>
+              <h3>Agent de support client par e&#8209;mail</h3>
+              <p class="work__summary">Un agent qui trie les e-mails du service client, cherche la réponse dans la base de connaissances interne et prépare un brouillon de réponse avec ses sources. Une personne relit et valide chaque réponse ; l'agent n'envoie rien lui-même.</p>
+              <ul class="work__points">
+                <li>Tri par catégorie et par urgence avec Claude, en sorties structurées validées par Pydantic</li>
+                <li>Recherche dans la base documentaire et brouillon qui cite les passages utilisés</li>
+                <li>Remboursements, gestes commerciaux et litiges écartés par un double contrôle, modèle et règles</li>
+                <li>Écran de relecture qui mesure le taux de brouillons envoyés tels quels et le temps gagné</li>
               </ul>
-              <ul class="tags"><li>Python</li><li>Claude API</li><li>RAG</li><li>Pydantic</li><li>Streamlit</li><li>IMAP</li><li>pytest</li></ul>
-              <a class="project__link" href="https://github.com/Brian-NDZANA-3IL/agent-support-email" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Voir le code</a>
+            </div>
+            <div class="work__side">
+              <p class="work__label">Technologies</p>
+              <p class="work__stack">Python, Claude API, Pydantic, scikit-learn, Streamlit, IMAP, pytest</p>
+              <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/agent-support-email" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </article>
-          <article class="project project--wide project--flip reveal">
-            <div class="project__cover cover--paper">
-              <div class="ratio">
-                <div class="ratio__label"><span>Taux d'endettement</span><strong>31,4 %</strong></div>
-                <div class="ratio__bar"><i></i><b></b></div>
-                <div class="ratio__scale"><span>0 %</span><span>plafond 35 %</span></div>
-                <ul class="ratio__checks">
-                  <li class="ok">Pièces complètes</li>
-                  <li class="ok">Revenus cohérents</li>
-                  <li class="warn">Crédit non déclaré</li>
-                </ul>
-              </div>
-            </div>
-            <div class="project__body">
-              <span class="tag">Projet perso</span>
+
+          <article class="work reveal" data-cat="genai">
+            <span class="work__num">02</span>
+            <div class="work__main">
+              <p class="work__domain">IA en finance · Extraction documentaire</p>
               <h3>Assistant d'analyse de dossiers de crédit</h3>
-              <p>Un outil qui aide les conseillers bancaires à instruire un dossier de prêt immobilier : pièces manquantes, extraction des données des PDF, indicateurs, contrôles de la politique de crédit et note d'analyse sourcée. Il propose, le conseiller décide et signe.</p>
-              <ul class="bullets">
-                <li>Chaque valeur extraite par Claude est accompagnée de sa citation, vérifiée dans la pièce</li>
-                <li>Calculs (endettement, reste à vivre, capacité) et recommandation faits par des règles, jamais par le modèle</li>
-                <li>Incohérences détectées : revenu surdéclaré, crédit non déclaré, rejets de prélèvement, identité</li>
-                <li>Conçu pour l'AI Act et le RGPD : données sensibles masquées, tests de biais, journal d'audit complet</li>
+              <p class="work__summary">Un outil d'aide aux conseillers bancaires pour instruire un dossier de prêt immobilier : pièces manquantes, extraction des données des PDF, indicateurs, contrôles de la politique de crédit et note d'analyse sourcée. L'outil propose, le conseiller décide et signe.</p>
+              <ul class="work__points">
+                <li>Chaque valeur extraite des pièces est accompagnée de sa citation, vérifiée dans le document</li>
+                <li>Taux d'endettement, reste à vivre et recommandation calculés par des règles, jamais par le modèle</li>
+                <li>Détection des incohérences : revenus surdéclarés, crédits non déclarés, incidents de paiement</li>
+                <li>Pensé pour l'AI Act et le RGPD : données sensibles masquées, tests de biais, journal d'audit</li>
               </ul>
-              <ul class="tags"><li>Python</li><li>Claude API</li><li>Pydantic</li><li>pypdf</li><li>Streamlit</li><li>pytest</li></ul>
-              <a class="project__link" href="https://github.com/Brian-NDZANA-3IL/agent-analyse-credit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Voir le code</a>
+            </div>
+            <div class="work__side">
+              <p class="work__label">Technologies</p>
+              <p class="work__stack">Python, Claude API, Pydantic, pypdf, Streamlit, pytest</p>
+              <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/agent-analyse-credit" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </article>
 
-          <article class="project reveal">
-            <div class="project__cover cover--blue">
-              <div class="bubble b1">C'est quoi la descente de gradient ?</div>
-              <div class="bubble b2">D'après le chapitre 3 de ton cours, c'est une méthode qui...</div>
-            </div>
-            <div class="project__body">
-              <span class="tag">Projet perso</span>
+          <article class="work reveal" data-cat="genai">
+            <span class="work__num">03</span>
+            <div class="work__main">
+              <p class="work__domain">IA générative · RAG</p>
               <h3>Chatbot pédagogique</h3>
-              <p>Un chatbot qui répond aux questions des étudiants en s'appuyant sur leurs supports de cours plutôt que sur les seules connaissances du LLM.</p>
-              <ul class="bullets">
-                <li>RAG hybride avec LangChain : MongoDB Atlas Search et FAISS interrogés ensemble</li>
-                <li>Travail sur le découpage et l'indexation pour limiter le contexte envoyé au modèle</li>
-                <li>Back en FastAPI, interface Streamlit, le tout dans Docker</li>
+              <p class="work__summary">Un assistant conversationnel qui répond aux questions des étudiants en s'appuyant sur leurs supports de cours plutôt que sur les seules connaissances du modèle.</p>
+              <ul class="work__points">
+                <li>Pipeline RAG hybride avec LangChain, combinant MongoDB Atlas Search et FAISS</li>
+                <li>Découpage et indexation pensés pour limiter le contexte envoyé au modèle</li>
+                <li>API FastAPI, interface Streamlit, déploiement conteneurisé avec Docker</li>
               </ul>
-              <ul class="tags"><li>LangChain</li><li>FAISS</li><li>MongoDB</li><li>FastAPI</li><li>Streamlit</li><li>Docker</li></ul>
-              <a class="project__link" href="https://github.com/Brian-NDZANA-3IL/chatbot" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Voir le code</a>
+            </div>
+            <div class="work__side">
+              <p class="work__label">Technologies</p>
+              <p class="work__stack">Python, LangChain, FAISS, MongoDB, FastAPI, Streamlit, Docker</p>
+              <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/chatbot" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </article>
 
-          <article class="project reveal">
-            <div class="project__cover cover--coral">
-              <div class="rings"><i></i><i></i><i></i></div>
-            </div>
-            <div class="project__body">
-              <span class="tag">Projet école</span>
-              <h3>SIMCO</h3>
-              <p>Un agent d'évaluation cognitive qui adapte ses questions selon les réponses et le comportement de la personne (webcam, signaux non verbaux).</p>
-              <ul class="bullets">
-                <li>Random Forest et MLP comparés pour classer les profils, en tenant compte du coût de calcul</li>
+          <article class="work reveal" data-cat="ml">
+            <span class="work__num">04</span>
+            <div class="work__main">
+              <p class="work__domain">IA multimodale</p>
+              <h3>SIMCO, évaluation cognitive adaptative</h3>
+              <p class="work__summary">Une plateforme d'évaluation cognitive qui adapte ses questions aux réponses et au comportement de la personne, en combinant analyse du comportement par webcam et modèles de classification.</p>
+              <ul class="work__points">
+                <li>Comparaison Random Forest et MLP pour classer les profils, selon le compromis précision / coût</li>
                 <li>Signaux non verbaux extraits avec MediaPipe</li>
-                <li>Choix des questions par théorie IRT et multi-armed bandit</li>
-                <li>Sujet ouvert, sans base existante : plusieurs pistes testées avant de fixer l'architecture</li>
+                <li>Choix des questions par théorie de réponse à l'item et algorithme de bandit</li>
+                <li>Sujet ouvert : plusieurs approches explorées avant de fixer l'architecture</li>
               </ul>
-              <ul class="tags"><li>PyTorch</li><li>Scikit-learn</li><li>MediaPipe</li><li>Mistral (Ollama)</li><li>FastAPI</li><li>React</li><li>Docker</li></ul>
-              <a class="project__link" href="https://github.com/Brian-NDZANA-3IL/SIMCO" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Voir le code</a>
+            </div>
+            <div class="work__side">
+              <p class="work__label">Technologies</p>
+              <p class="work__stack">Python, PyTorch, scikit-learn, MediaPipe, FastAPI, React, Docker</p>
+              <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/SIMCO" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </article>
 
-          <article class="project reveal">
-            <div class="project__cover cover--green">
-              <svg class="chart" viewBox="0 0 200 110">
-                <path class="chart__area" d="M10 100 C 30 50, 60 28, 100 20 S 170 12, 190 10 L190 100 Z"/>
-                <path class="chart__line" d="M10 100 C 30 50, 60 28, 100 20 S 170 12, 190 10"/>
-                <line x1="10" y1="100" x2="190" y2="10" class="chart__diag"/>
-              </svg>
-            </div>
-            <div class="project__body">
-              <span class="tag">Projet de cours</span>
-              <h3>Prédiction du churn</h3>
-              <p>Prédire quels clients risquent de partir. J'ai volontairement gardé un modèle simple pour voir jusqu'où il pouvait aller.</p>
-              <ul class="bullets">
-                <li>Feature engineering puis régression logistique</li>
-                <li>Évaluation avec matrice de confusion, courbe ROC et AUC</li>
-              </ul>
-              <ul class="tags"><li>Python</li><li>Pandas</li><li>Scikit-learn</li></ul>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <div class="project__cover cover--ink">
-              <svg class="maze" viewBox="0 0 200 120">
-                <path class="maze__walls" d="M20 20h160v80H20z M60 20v50 M100 50v50 M140 20v50"/>
-                <path class="maze__path" d="M40 90 V35 H80 V85 H120 V35 H160 V90"/>
-                <circle class="maze__bot" r="6" cx="40" cy="90"/>
-              </svg>
-            </div>
-            <div class="project__body">
-              <span class="tag">Projet école</span>
-              <h3>Navigation autonome TurtleBot3</h3>
-              <p>Comparer deux façons de faire naviguer un robot dans un labyrinthe : la planification classique et l'apprentissage par renforcement.</p>
-              <ul class="bullets">
+          <article class="work reveal" data-cat="robot">
+            <span class="work__num">05</span>
+            <div class="work__main">
+              <p class="work__domain">Robotique · Apprentissage par renforcement</p>
+              <h3>Navigation autonome d'un robot TurtleBot3</h3>
+              <p class="work__summary">Comparaison de deux approches pour faire naviguer un robot dans un labyrinthe : la planification classique et l'apprentissage par renforcement.</p>
+              <ul class="work__points">
                 <li>Planification A*, Dijkstra et Greedy sur grille d'occupation, suivi de trajectoire PID</li>
-                <li>Agent DQN avec experience replay entraîné sur l'odométrie et le lidar</li>
+                <li>Agent DQN entraîné sur l'odométrie et le lidar</li>
                 <li>Benchmark des deux approches en simulation Gazebo</li>
               </ul>
-              <ul class="tags"><li>Python</li><li>ROS Noetic</li><li>Gazebo</li><li>DQN</li><li>A*</li></ul>
-              <a class="project__link" href="https://github.com/Brian-NDZANA-3IL/GROUPE-I2-ROBOTIC-PROJECT" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> Voir le code</a>
+            </div>
+            <div class="work__side">
+              <p class="work__label">Technologies</p>
+              <p class="work__stack">Python, ROS Noetic, Gazebo, PyTorch</p>
+              <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/GROUPE-I2-ROBOTIC-PROJECT" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work reveal" data-cat="ml">
+            <span class="work__num">06</span>
+            <div class="work__main">
+              <p class="work__domain">Machine learning · Modélisation prédictive</p>
+              <h3>Prédiction du churn client</h3>
+              <p class="work__summary">Identifier les clients susceptibles de partir, avec un modèle volontairement simple et peu coûteux, évalué rigoureusement.</p>
+              <ul class="work__points">
+                <li>Feature engineering et régression logistique</li>
+                <li>Évaluation par matrice de confusion, courbe ROC et AUC pour objectiver le compromis performance / complexité</li>
+              </ul>
+            </div>
+            <div class="work__side">
+              <p class="work__label">Technologies</p>
+              <p class="work__stack">Python, Pandas, scikit-learn</p>
+              <span class="work__nolink">Code non publié</span>
             </div>
           </article>
         </div>

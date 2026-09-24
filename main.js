@@ -129,7 +129,7 @@ function countUp(el) {
 }
 
 // Apparition au scroll
-document.querySelectorAll('.stats, .projects, .skills, .edu, .about__cards').forEach((group) => {
+document.querySelectorAll('.skills, .edu, .about__cards').forEach((group) => {
   [...group.children].forEach((child, i) => child.style.setProperty('--stagger', i * 90 + 'ms'));
 });
 
@@ -250,7 +250,7 @@ if (canHover && !reduceMotion) {
 
   document.addEventListener('mouseover', (e) => {
     cursor.classList.add('is-on');
-    cursor.classList.toggle('is-hover', !!e.target.closest('a, button, .project'));
+    cursor.classList.toggle('is-hover', !!e.target.closest('a, button'));
   });
   document.addEventListener('mouseleave', () => cursor.classList.remove('is-on'));
 
@@ -263,32 +263,18 @@ if (canHover && !reduceMotion) {
     });
     btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
   });
-
-  document.querySelectorAll('.project').forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - 0.5;
-      const y = (e.clientY - r.top) / r.height - 0.5;
-      card.style.transition = 'transform .1s linear, border-color .3s';
-      card.style.transform = `perspective(1000px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg) translateY(-6px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transition = '';
-      card.style.transform = '';
-    });
-  });
-
-  const portrait = document.querySelector('.portrait');
-  const cards = document.querySelectorAll('.float-card');
-  hero.addEventListener('mousemove', (e) => {
-    const x = e.clientX / window.innerWidth - 0.5;
-    const y = e.clientY / window.innerHeight - 0.5;
-    portrait.style.transform = `translate(${x * 16}px, ${y * 16}px)`;
-    cards.forEach((c) => {
-      const depth = Number(c.dataset.depth);
-      c.style.translate = `${x * depth}px ${y * depth}px`;
-    });
-  });
 }
+
+// Filtre des projets
+const filters = document.querySelectorAll('.filter');
+filters.forEach((button) => {
+  button.addEventListener('click', () => {
+    filters.forEach((b) => b.classList.toggle('is-active', b === button));
+    const cat = button.dataset.filter;
+    document.querySelectorAll('.work').forEach((work) => {
+      work.classList.toggle('is-hidden', cat !== 'all' && work.dataset.cat !== cat);
+    });
+  });
+});
 
 document.getElementById('year').textContent = new Date().getFullYear();

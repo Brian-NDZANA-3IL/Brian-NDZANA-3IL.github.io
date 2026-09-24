@@ -276,13 +276,14 @@
             </div>
           </article>
 
-          <article class="work reveal" data-cat="ml">
+          <article class="work reveal" data-cat="genai">
             <span class="work__num">06</span>
             <div class="work__main">
-              <p class="work__domain">IA multimodale</p>
+              <p class="work__domain">IA générative · IA multimodale</p>
               <h3>SIMCO, évaluation cognitive adaptative</h3>
-              <p class="work__summary">Une plateforme d'évaluation cognitive qui adapte ses questions aux réponses et au comportement de la personne, en combinant analyse du comportement par webcam et modèles de classification.</p>
+              <p class="work__summary">Une plateforme d'évaluation cognitive : les quiz sont générés par un LLM (Mistral, exécuté localement avec Ollama), puis les questions s'adaptent aux réponses et au comportement de la personne, observé par webcam.</p>
               <ul class="work__points">
+                <li>Génération automatique des quiz par Mistral via Ollama, sans envoyer de données à un service externe</li>
                 <li>Comparaison Random Forest et MLP pour classer les profils, selon le compromis précision / coût</li>
                 <li>Signaux non verbaux extraits avec MediaPipe</li>
                 <li>Choix des questions par théorie de réponse à l'item et algorithme de bandit</li>
@@ -291,7 +292,7 @@
             </div>
             <div class="work__side">
               <p class="work__label">Technologies</p>
-              <p class="work__stack">Python, PyTorch, scikit-learn, MediaPipe, FastAPI, React, Docker</p>
+              <p class="work__stack">Python, Ollama, Mistral, PyTorch, scikit-learn, MediaPipe, FastAPI, React, Docker</p>
               <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/SIMCO" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </article>

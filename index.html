@@ -175,6 +175,7 @@
           <button class="filter is-active" data-filter="all">Tous</button>
           <button class="filter" data-filter="genai">IA générative</button>
           <button class="filter" data-filter="ml">Machine learning</button>
+          <button class="filter" data-filter="bi">Business intelligence</button>
           <button class="filter" data-filter="robot">Robotique</button>
         </div>
 
@@ -219,8 +220,48 @@
             </div>
           </article>
 
-          <article class="work reveal" data-cat="genai">
+          <article class="work reveal" data-cat="ml">
             <span class="work__num">03</span>
+            <div class="work__main">
+              <p class="work__domain">Machine learning · Finance</p>
+              <h3>Détection de fraude dans les paiements en ligne</h3>
+              <p class="work__summary">Repérer les transactions frauduleuses dans plus de six millions de paiements mobiles simulés (jeu public PaySim), où les fraudes sont très minoritaires.</p>
+              <ul class="work__points">
+                <li>Exploration des types de transaction, des montants et de la répartition des fraudes</li>
+                <li>Préparation : encodage du type de transaction, retrait des identifiants de comptes</li>
+                <li>Comparaison régression logistique, Random Forest et XGBoost sur le score ROC-AUC</li>
+                <li>Analyse du modèle retenu par matrice de confusion</li>
+              </ul>
+            </div>
+            <div class="work__side">
+              <p class="work__label">Technologies</p>
+              <p class="work__stack">Python, Pandas, scikit-learn, XGBoost, Seaborn</p>
+              <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/detection-fraude-paiements" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work reveal" data-cat="bi">
+            <span class="work__num">04</span>
+            <div class="work__main">
+              <p class="work__domain">Business intelligence · Power BI</p>
+              <h3>Tableau de bord des ventes AdventureWorks</h3>
+              <p class="work__summary">Un tableau de bord Power BI pour suivre l'activité commerciale d'un distributeur d'articles de sport : chiffre d'affaires, marge, commandes et retours, avec leur évolution dans le temps.</p>
+              <ul class="work__points">
+                <li>Modèle de données construit à partir des fichiers bruts (ventes, produits, clients, retours)</li>
+                <li>Indicateurs clés et comparaison au mois précédent</li>
+                <li>Tendance du chiffre d'affaires, commandes par catégorie, classement des produits avec leur taux de retour</li>
+              </ul>
+              <figure class="work__shot"><img src="assets/projets/adventureworks.jpg" alt="Tableau de bord Power BI des ventes AdventureWorks : indicateurs, tendance du chiffre d'affaires, commandes par catégorie et classement des produits" loading="lazy" width="959" height="508" /></figure>
+            </div>
+            <div class="work__side">
+              <p class="work__label">Technologies</p>
+              <p class="work__stack">Power BI, Power Query, DAX</p>
+              <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/analyse-ventes-adventureworks" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work reveal" data-cat="genai">
+            <span class="work__num">05</span>
             <div class="work__main">
               <p class="work__domain">IA générative · RAG</p>
               <h3>Chatbot pédagogique</h3>
@@ -239,7 +280,7 @@
           </article>
 
           <article class="work reveal" data-cat="ml">
-            <span class="work__num">04</span>
+            <span class="work__num">06</span>
             <div class="work__main">
               <p class="work__domain">IA multimodale</p>
               <h3>SIMCO, évaluation cognitive adaptative</h3>
@@ -259,7 +300,7 @@
           </article>
 
           <article class="work reveal" data-cat="robot">
-            <span class="work__num">05</span>
+            <span class="work__num">07</span>
             <div class="work__main">
               <p class="work__domain">Robotique · Apprentissage par renforcement</p>
               <h3>Navigation autonome d'un robot TurtleBot3</h3>
@@ -278,7 +319,26 @@
           </article>
 
           <article class="work reveal" data-cat="ml">
-            <span class="work__num">06</span>
+            <span class="work__num">08</span>
+            <div class="work__main">
+              <p class="work__domain">Machine learning · Régression</p>
+              <h3>Prédiction des prix immobiliers</h3>
+              <p class="work__summary">Estimer le prix de vente d'une maison à partir de ses caractéristiques, sur le jeu de données Ames Housing.</p>
+              <ul class="work__points">
+                <li>Mise à l'échelle des variables, ajustée sur le seul jeu d'entraînement</li>
+                <li>Modèle Elastic Net, paramètres choisis par recherche en grille et validation croisée</li>
+                <li>Évaluation par MAE et RMSE sur un jeu de test séparé</li>
+              </ul>
+            </div>
+            <div class="work__side">
+              <p class="work__label">Technologies</p>
+              <p class="work__stack">Python, Pandas, scikit-learn</p>
+              <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/prediction-prix-immobiliers" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            </div>
+          </article>
+
+          <article class="work reveal" data-cat="ml">
+            <span class="work__num">09</span>
             <div class="work__main">
               <p class="work__domain">Machine learning · Modélisation prédictive</p>
               <h3>Prédiction du churn client</h3>
@@ -294,6 +354,16 @@
               <span class="work__nolink">Code non publié</span>
             </div>
           </article>
+        </div>
+
+        <div class="others reveal">
+          <h3 class="others__title">Autres travaux</h3>
+          <ul class="others__list">
+            <li><a href="https://github.com/Brian-NDZANA-3IL/detection-mines-sonar" target="_blank" rel="noopener"><span class="other__title">Classification de signaux sonar</span><span class="other__desc">KNN, validation croisée du nombre de voisins</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+            <li><a href="https://github.com/Brian-NDZANA-3IL/prediction-maladie-cardiaque" target="_blank" rel="noopener"><span class="other__title">Prédiction de maladie cardiaque</span><span class="other__desc">Régression logistique, courbe ROC</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+            <li><a href="https://github.com/Brian-NDZANA-3IL/analyse-notes-films" target="_blank" rel="noopener"><span class="other__title">Analyse des notes de films</span><span class="other__desc">Visualisation, comparaison de plateformes de notation</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+            <li><a href="https://github.com/Brian-NDZANA-3IL/plateforme-candidatures" target="_blank" rel="noopener"><span class="other__title">CareerTrackr, suivi de candidatures</span><span class="other__desc">Projet d'équipe : Java Spring Boot, PostgreSQL, API Gmail, spaCy</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a></li>
+          </ul>
         </div>
       </div>
     </section>

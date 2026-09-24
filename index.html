@@ -88,9 +88,9 @@
 
     <div class="marquee" id="marquee">
       <div class="marquee__track" id="marqueeTrack">
-        <span>Python</span><span>Scikit-learn</span><span>PyTorch</span><span>LangChain</span><span>SQL</span>
+        <span>Python</span><span>Scikit-learn</span><span>PyTorch</span><span>LangChain</span><span>MCP</span><span>SQL</span>
         <span>Pandas</span><span>FastAPI</span><span>Pydantic</span><span>Docker</span><span>Google Cloud (GCP)</span><span>Power BI</span><span>TensorFlow</span><span>Git</span><span>Kubernetes</span>
-        <span aria-hidden="true">Python</span><span aria-hidden="true">Scikit-learn</span><span aria-hidden="true">PyTorch</span><span aria-hidden="true">LangChain</span><span aria-hidden="true">SQL</span>
+        <span aria-hidden="true">Python</span><span aria-hidden="true">Scikit-learn</span><span aria-hidden="true">PyTorch</span><span aria-hidden="true">LangChain</span><span aria-hidden="true">MCP</span><span aria-hidden="true">SQL</span>
         <span aria-hidden="true">Pandas</span><span aria-hidden="true">FastAPI</span><span aria-hidden="true">Pydantic</span><span aria-hidden="true">Docker</span><span aria-hidden="true">Google Cloud (GCP)</span><span aria-hidden="true">Power BI</span><span aria-hidden="true">TensorFlow</span><span aria-hidden="true">Git</span><span aria-hidden="true">Kubernetes</span>
       </div>
     </div>
@@ -183,19 +183,21 @@
           <article class="work reveal" data-cat="genai">
             <span class="work__num">01</span>
             <div class="work__main">
-              <p class="work__domain">Agents IA · Traitement des e-mails</p>
+              <p class="work__domain">Agents IA · LangChain · MCP</p>
               <h3>Agent de support client par e&#8209;mail</h3>
               <p class="work__summary">Un agent qui trie les e-mails du service client, cherche la réponse dans la base de connaissances interne et prépare un brouillon de réponse avec ses sources. Une personne relit et valide chaque réponse ; l'agent n'envoie rien lui-même.</p>
               <ul class="work__points">
-                <li>Tri par catégorie et par urgence avec Claude, en sorties structurées validées par Pydantic</li>
+                <li>Traitement orchestré avec LangChain : tri, contrôle du périmètre, recherche, rédaction et garde-fous enchaînés en une chaîne avec embranchements</li>
+                <li>Appels à Claude via LangChain, en sorties structurées validées par Pydantic</li>
                 <li>Recherche dans la base documentaire et brouillon qui cite les passages utilisés</li>
                 <li>Remboursements, gestes commerciaux et litiges écartés par un double contrôle, modèle et règles</li>
+                <li>Serveur MCP qui expose les outils de l'agent (recherche, périmètre, préparation d'une réponse) et la base de connaissances, sans aucun outil d'envoi</li>
                 <li>Écran de relecture qui mesure le taux de brouillons envoyés tels quels et le temps gagné</li>
               </ul>
             </div>
             <div class="work__side">
               <p class="work__label">Technologies</p>
-              <p class="work__stack">Python, Claude API, Pydantic, scikit-learn, Streamlit, IMAP, pytest</p>
+              <p class="work__stack">Python, LangChain, Claude API, MCP, Pydantic, scikit-learn, Streamlit, IMAP, pytest</p>
               <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/agent-support-email" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </article>
@@ -203,19 +205,20 @@
           <article class="work reveal" data-cat="genai">
             <span class="work__num">02</span>
             <div class="work__main">
-              <p class="work__domain">IA en finance · Extraction documentaire</p>
+              <p class="work__domain">IA en finance · LangChain · MCP</p>
               <h3>Assistant d'analyse de dossiers de crédit</h3>
               <p class="work__summary">Un outil d'aide aux conseillers bancaires pour instruire un dossier de prêt immobilier : pièces manquantes, extraction des données des PDF, indicateurs, contrôles de la politique de crédit et note d'analyse sourcée. L'outil propose, le conseiller décide et signe.</p>
               <ul class="work__points">
-                <li>Chaque valeur extraite des pièces est accompagnée de sa citation, vérifiée dans le document</li>
+                <li>Analyse orchestrée avec LangChain, extraction des pièces en parallèle ; chaque valeur extraite est accompagnée de sa citation, vérifiée dans le document</li>
                 <li>Taux d'endettement, reste à vivre et recommandation calculés par des règles, jamais par le modèle</li>
                 <li>Détection des incohérences : revenus surdéclarés, crédits non déclarés, incidents de paiement</li>
+                <li>Serveur MCP : calculatrice financière, complétude, analyse et politique de crédit accessibles à un assistant, sans aucun outil de décision</li>
                 <li>Pensé pour l'AI Act et le RGPD : données sensibles masquées, tests de biais, journal d'audit</li>
               </ul>
             </div>
             <div class="work__side">
               <p class="work__label">Technologies</p>
-              <p class="work__stack">Python, Claude API, Pydantic, pypdf, Streamlit, pytest</p>
+              <p class="work__stack">Python, LangChain, Claude API, MCP, Pydantic, pypdf, Streamlit, pytest</p>
               <a class="work__link" href="https://github.com/Brian-NDZANA-3IL/agent-analyse-credit" target="_blank" rel="noopener">Code source <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
             </div>
           </article>
@@ -377,7 +380,7 @@
         <div class="skills">
           <div class="skill reveal">
             <h3>Machine learning et IA</h3>
-            <ul class="tags"><li>Scikit-learn</li><li>PyTorch</li><li>TensorFlow</li><li>LangChain</li><li>LLaMA 3</li><li>RAG</li><li>Agents LLM</li><li>Prompt engineering</li><li>Détection d'anomalies</li></ul>
+            <ul class="tags"><li>Scikit-learn</li><li>PyTorch</li><li>TensorFlow</li><li>LangChain</li><li>LLaMA 3</li><li>RAG</li><li>Agents LLM</li><li>MCP (Model Context Protocol)</li><li>Prompt engineering</li><li>Détection d'anomalies</li></ul>
           </div>
           <div class="skill reveal">
             <h3>Données</h3>
